@@ -34,11 +34,11 @@ For this sprint you'll use MySQL as a RDBMS. If you are using a Hack Reactor pai
 ### Running the MySQL Command-Line Tool to interact with the running MySQL Server ###
 When you interact with MySQL databases you are always interacting as a specific user. MySQL comes out of the box with a single user called 'root'. At install, mySQL creates the 'root' with no password by default but users can specify a password during that process. On Hack Reactor pairing stations, we have set up a user named __`student`__ for you to use so you'll be using that user rather than __`root`__.
    - [ ] Start the interactive mysql shell for the running server.
-            * __On a campus pairing station:__
-                * log in as the __`student`__ user, by running the command __`mysql -u student -p`__. The password is __`student`__.
-            * On your own computer:
-               * Login using the root user created at installation. __`mysql -u root -p`__ and specify the password you setup at install. Or, if you have no password use: __`mysql -u root`__
-               * If you cannot login successfully, alter the root user to use mysql_native_password for compatability. Run the command: __`echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`__, either leaving the password blank as given or specifying your own password at __`BY 'yourpreferredpasswordhere'`__. Then attempt to login again using the password you identified.
+          * __On a campus pairing station:__
+             * log in as the __`student`__ user, by running the command __`mysql -u student -p`__. The password is __`student`__.
+          * On your own computer:
+             * Login using the root user created at installation. __`mysql -u root -p`__ and specify the password you setup at install. Or, if you have no password use: __`mysql -u root`__
+             * If you cannot login successfully, alter the root user to use mysql_native_password for compatability. Run the command: __`echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`__, either leaving the password blank as given or specifying your own password at __`BY 'yourpreferredpasswordhere'`__. Then attempt to login again using the password you identified.
 
 You should see a welcome message indicating you have successfully connected to the MySQL server and a __`mysql>`__ prompt awaiting your very first SQL query.
 
