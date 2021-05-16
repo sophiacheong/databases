@@ -11,7 +11,7 @@ Learn basic SQL by completing __Exercise: An Introduction to SQL.__
 
 ### Install and Set Up a Local MySQL Server ###
 For this sprint you'll use MySQL as a RDBMS. If you are using a Hack Reactor pairing station, MySQL is installed and running already, and you should skip this section.
-    - [ ] Ensure you have __`mysql`__ installed by running the command __`which mysql`__ from inside the terminal.
+   - [ ] Ensure you have __`mysql`__ installed by running the command __`which mysql`__ from inside the terminal.
     * __If it is installed,__ verify you have version 8.0.x: use __`mysql -V`__, and if you are running the correct version it will be printed out. Examples below:
         * __`Ver 8.0.22-0ubuntu0.20.04.2`__
         * __`Ver 8.0.22 for osx10.15 on x86_64 (Homebrew)`__
@@ -19,21 +19,21 @@ For this sprint you'll use MySQL as a RDBMS. If you are using a Hack Reactor pai
     * __If you have a different verison installed such as 5.x.x:__
         * Make a helpdesk ticket to get support in uninstalling and installing the correct version.
     * __If mysql is not installed,__
-       - [ ] Mac users can install it using __`brew install mysql@8.0`__.
-          - [ ] Confirm you have a MySQL server running with the command __`brew services list`__. You should see __`mysql started`__ in the list of services.
-          - [ ] If the server is not running, start one up by issuing the __`brew services start mysql`__. You should see __`Successfully started 'mysql'`__.
-        - [ ] Windows/wsl users: This guide is available [here](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database#install-mysql). Concise steps below:
-           - [ ] Open your WSL terminal (ie. Ubuntu 20.04).
-           - [ ] Update your Ubuntu packages: __`sudo apt update`__
-           - [ ] Once the packages have updated, install MySQL with: __`sudo apt install mysql-server`__
-           - [ ] Confirm installation and get the version number: __`mysql --version`___
-           - [ ] Start the mysql server by issuing the `sudo service mysql start`.
-           - [ ] Confirm you have a MySQL server running with the command __`sudo service mysql status`__. It's running if you get msql info returned.
+      - [ ] Mac users can install it using __`brew install mysql@8.0`__.
+       - [ ] Confirm you have a MySQL server running with the command __`brew services list`__. You should see __`mysql started`__ in the list of services.
+       - [ ] If the server is not running, start one up by issuing the __`brew services start mysql`__. You should see __`Successfully started 'mysql'`__.
+       - [ ] Windows/wsl users: This guide is available [here](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database#install-mysql). Concise steps below:
+         - [ ] Open your WSL terminal (ie. Ubuntu 20.04).
+         - [ ] Update your Ubuntu packages: __`sudo apt update`__
+         - [ ] Once the packages have updated, install MySQL with: __`sudo apt install mysql-server`__
+         - [ ] Confirm installation and get the version number: __`mysql --version`___
+         - [ ] Start the mysql server by issuing the `sudo service mysql start`.
+         - [ ] Confirm you have a MySQL server running with the command __`sudo service mysql status`__. It's running if you get msql info returned.
        - [ ] Be aware that anytime you want to interact with your MySQL databases during development, you will need to have the MySQL server running. Don't be surprised if a bug you come across later is a result of your not running this server when needed.
 
 ### Running the MySQL Command-Line Tool to interact with the running MySQL Server ###
 When you interact with MySQL databases you are always interacting as a specific user. MySQL comes out of the box with a single user called 'root'. At install, mySQL creates the 'root' with no password by default but users can specify a password during that process. On Hack Reactor pairing stations, we have set up a user named __`student`__ for you to use so you'll be using that user rather than __`root`__.
-       - [ ] Start the interactive mysql shell for the running server.
+   - [ ] Start the interactive mysql shell for the running server.
             * __On a campus pairing station:__
                 * log in as the __`student`__ user, by running the command __`mysql -u student -p`__. The password is __`student`__.
             * On your own computer:
