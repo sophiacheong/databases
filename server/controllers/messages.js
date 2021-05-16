@@ -1,6 +1,17 @@
 var models = require('../models');
+var connection = require('../db/index.js');
 
 module.exports = {
-  get: function (req, res) {}, // a function which handles a get request for all messages
-  post: function (req, res) {} // a function which handles posting a message to the database
+  get: function (req, res) {
+    var qryString = 'SELECT * FROM messages';
+    connection.query(qryString, (err, results) => {
+      if (err) { res.stauts(404).send(err); } else { res.status(200).send(results); }
+    });
+  },
+  post: function (req, res) {
+    var qryString = `INSERT INTO messages(messageText, userID, roomID) VALUES ('${req.body.messageText}', ${req.body.userID}, ${req.body.roomID})`;
+    connection.query(qryString, (err, results) => {
+      if (err) { res.status(400).send(err); } else { res.status(200).send(results); }
+    });
+  }
 };
