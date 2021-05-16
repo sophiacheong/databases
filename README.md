@@ -36,7 +36,7 @@ When you interact with MySQL databases you are always interacting as a specific 
    - [ ] Start the interactive mysql shell for the running server.
         * __On a campus pairing station:__
             * log in as the __`student`__ user, by running the command __`mysql -u student -p`__. The password is __`student`__.
-        * On your own computer:
+        * __On your own computer:__
             * Login using the root user created at installation. __`mysql -u root -p`__ and specify the password you setup at install. Or, if you have no password use: __`mysql -u root`__
             * If you cannot login successfully, alter the root user to use mysql_native_password for compatability. Run the command: __`echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`__, either leaving the password blank as given or specifying your own password at __`BY 'yourpreferredpasswordhere'`__. Then attempt to login again using the password you identified.
 
