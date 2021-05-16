@@ -11,7 +11,7 @@ module.exports = {
   post: function (req, res) {
     var qryString = `INSERT INTO users(name) VALUES ('${req.body.username}')`;
     connection.query(qryString, (err, results) => {
-      if (err) { res.status(400).send(err); } else { res.status(200).send(results); }
+      if (err) { res.status(400).send(err); } else { res.status(200).send('Success'); }
     });
   }
 };

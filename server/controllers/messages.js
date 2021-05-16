@@ -9,9 +9,9 @@ module.exports = {
     });
   },
   post: function (req, res) {
-    var qryString = `INSERT INTO messages(messageText, userID, roomID) VALUES ('${req.body.messageText}', ${req.body.userID}, ${req.body.roomID})`;
+    var qryString = `INSERT INTO messages(messageText, userID, roomID) VALUES ("${req.body.message}", ${req.body.userID}, ${req.body.roomID})`;
     connection.query(qryString, (err, results) => {
-      if (err) { res.status(400).send(err); } else { res.status(200).send(results); }
+      if (err) { res.status(400).send(console.log(err)); } else { res.status(200).send('Success'); }
     });
   }
 };
