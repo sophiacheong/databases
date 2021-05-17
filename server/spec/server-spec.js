@@ -93,4 +93,18 @@ describe('Persistent Node Chat Server', function() {
         });
     });
   });
+
+  it('Should insert username into database', function(done) {
+    axios.post('http://127.0.0.1:3000/classes/users', {
+      username: 'Valjean'
+    })
+      .then(function() {
+        axios.get('http://127.0.0.1:3000/classes/users')
+          .then(function(response) {
+            var username = response.data;
+            expect(username[username.length - 1].name).to.equal('Valjean');
+            done();
+          });
+      });
+  });
 });
